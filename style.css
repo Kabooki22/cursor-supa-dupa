@@ -1,0 +1,27 @@
+body
+{
+    background: rgb(0, 89, 148);
+    overflow: hidden;
+}
+i {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    pointer-events: none;
+    animation: animate 2s linear forwards;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 5px solid rgb(0, 153, 255);
+}
+@keyframes animate {
+    0%
+    {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translate(var(--x),var(--y));
+    }
+}
